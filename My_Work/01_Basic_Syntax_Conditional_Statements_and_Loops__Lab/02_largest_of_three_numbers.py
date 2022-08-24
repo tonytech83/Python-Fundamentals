@@ -1,7 +1,7 @@
 container = []
 
-for number in range(3):
-    num = int(input())
-    container.append(num)
+for num in range(3):
+    number = int(input())
+    container.append(number)
 
 print(max(container))
