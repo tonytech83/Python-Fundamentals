@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8793a636-306d-407f-a345-2593172b38b8" name="Changes" comment="" />
+    <list default="true" id="8793a636-306d-407f-a345-2593172b38b8" name="Changes" comment="Made changes on .gitignore file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +68,21 @@
       <option name="presentableId" value="Default" />
       <updated>1661325207323</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added exam &quot;01. Number Definer&quot; from &quot;Basic Syntax, Conditional Statements and Loops - Lab&quot;">
+      <created>1661327106563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661327106563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Made changes on .gitignore file">
+      <created>1661327336756</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661327336756</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +95,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added exam &quot;01. Number Definer&quot; from &quot;Basic Syntax, Conditional Statements and Loops - Lab&quot;" />
+    <MESSAGE value="Made changes on .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made changes on .gitignore file" />
   </component>
 </project>
