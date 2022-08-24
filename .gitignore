@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# remove folders from GitHub.com
+**/.idea
+vent
+.idea/. i d e a 
+ 
+ 
