@@ -15,7 +15,7 @@ while name != 'Welcome!':
         print(f'{name} goes to Slytherin.')
     elif len(name) == 6:
         print(f'{name} goes to Ravenclaw.')
-    elif len(name) > 6:
+    else:
         print(f'{name} goes to Hufflepuff.')
 
     name = input()
