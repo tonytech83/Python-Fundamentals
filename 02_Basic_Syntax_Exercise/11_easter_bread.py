@@ -2,17 +2,13 @@ budget = float(input())
 flour_price = float(input())
 
 eggs_price = flour_price * 0.75
-milk_price = flour_price * 1.25
+milk_price = flour_price * 1.25 / 4
+loaf_price = eggs_price + flour_price + milk_price
 
 number_of_loaves = 0
 colored_eggs = 0
 
-while True:
-
-    loaf_price = eggs_price + flour_price + milk_price * 0.25
-
-    if budget < loaf_price:
-        break
+while budget >= loaf_price:
 
     budget -= loaf_price
     number_of_loaves += 1
