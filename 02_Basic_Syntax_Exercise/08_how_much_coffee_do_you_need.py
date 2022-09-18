@@ -7,11 +7,9 @@ while event != "END":
 
     if event.lower() in events:
         if 65 <= ord(event[0]) <= 90:
-            coffee = 2
+            coffees += 2
         else:
-            coffee = 1
-
-        coffees += coffee
+            coffees += 1
 
     event = input()
 
