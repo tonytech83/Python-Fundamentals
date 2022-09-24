@@ -9,11 +9,9 @@ for line in range(number_of_lines):
     char = input()
 
     if char == "(" or char == ")":
-
         if char == bracket_array[-1]:
             is_balanced = False
             break
-
         bracket_array.append(char)
     else:
         continue
