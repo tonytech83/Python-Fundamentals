@@ -39,4 +39,3 @@ while True:
     elif command[0] == 'End':
         print(*targets, sep='|')
         break
-
