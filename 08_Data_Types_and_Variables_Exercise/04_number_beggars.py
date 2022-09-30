@@ -1,7 +1,4 @@
-money = []
-
-for number in input().split(', '):
-    money.append(int(number))
+money = [int(x) for x in input().split(', ')]
 
 beggars_count = int(input())
 
