@@ -2,11 +2,6 @@ sequence_of_numbers = [x for x in input().split()]
 
 received_string = [x for x in input()]
 
-words_to_letters = []
-for word in received_string:
-    for letter in word:
-        words_to_letters.append(letter)
-
 message = []
 
 for number in sequence_of_numbers:
@@ -16,10 +11,10 @@ for number in sequence_of_numbers:
     for digit in number:
         current_idx += int(digit)
 
-    if current_idx >= len(words_to_letters):
-        current_idx -= len(words_to_letters)
+    if current_idx >= len(received_string):
+        current_idx -= len(received_string)
 
-    message.append(words_to_letters[current_idx])
-    words_to_letters.pop(current_idx)
+    message.append(received_string[current_idx])
+    received_string.pop(current_idx)
 
 print(*message, sep='')
