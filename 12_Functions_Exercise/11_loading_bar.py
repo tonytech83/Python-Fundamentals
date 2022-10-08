@@ -13,8 +13,6 @@ percent_number = int(input())
 loading_bar(percent_number, bar)
 
 if percent_number == 100:
-    print(f'{percent_number}% Complete!')
-    print(f"[{''.join(bar)}]")
+    print(f'{percent_number}% Complete!\n[%%%%%%%%%%]')
 else:
-    print(f"{percent_number}% [{''.join(bar)}]")
-    print('Still loading...')
+    print(f"{percent_number}% [{''.join(bar)}]\nStill loading...")
