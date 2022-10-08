@@ -1,8 +1,8 @@
-def recur_factorial(number_1):
-    if number_1 == 1:
-        return number_1
+def recur_factorial(number):
+    if number == 1:
+        return number
     else:
-        return number_1 * recur_factorial(number_1 - 1)
+        return number * recur_factorial(number - 1)
 
 
 number_one = int(input())
