@@ -18,22 +18,24 @@ def remove_people(current_command):
     train[wagon] -= people
 
 
-number_wagons = int(input())
-
-train = [0] * number_wagons
-
-command = input()
-
-while command != 'End':
-    current_command = command.split(' ')
-    event = current_command[0]
-
-    if event == 'add':
-        add_people(current_command)
-    elif event == 'insert':
-        insert_people(current_command)
-    elif event == 'leave':
-        remove_people(current_command)
-
+def main():
     command = input()
-print(train)
+
+    while command != 'End':
+        current_command = command.split(' ')
+        event = current_command[0]
+
+        if event == 'add':
+            add_people(current_command)
+        elif event == 'insert':
+            insert_people(current_command)
+        elif event == 'leave':
+            remove_people(current_command)
+
+        command = input()
+    print(train)
+
+
+number_wagons = int(input())
+train = [0] * number_wagons
+main()
