@@ -1,10 +1,8 @@
 def check_chairs(business_center):
     free_chairs = []
     for room in business_center:
-        current_room = room.split()
-        chairs = len(current_room[0])
-        persons = int(current_room[1])
-        free_chairs.append(chairs - persons)
+        chairs, persons = room.split()
+        free_chairs.append(len(chairs) - int(persons))
 
     if sum(free_chairs) >= 0:
         return print(f'Game On, {sum(free_chairs)} free chairs left')
