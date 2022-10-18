@@ -1,7 +1,6 @@
 def collect(items_jornal, current_command):
     item = current_command[1]
-
-    if not item in items_jornal:
+    if item not in items_jornal:
         items_jornal.append(item)
     return items_jornal
 
