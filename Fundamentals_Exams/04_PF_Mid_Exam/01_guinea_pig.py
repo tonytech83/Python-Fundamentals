@@ -4,7 +4,7 @@ cover_quantity = float(input()) * 1000
 pig_weight = float(input()) * 1000
 
 month = 30
-is_enough = False
+is_not_enough = False
 
 for day in range(1, month + 1):
 
@@ -12,7 +12,7 @@ for day in range(1, month + 1):
 
     # check if run out of food, hay or cover
     if food_quantity <= 0 or hay_quantity <= 0 or cover_quantity <= 0:
-        is_enough = True
+        is_not_enough = True
         break
 
     if day % 2 == 0:
@@ -21,7 +21,7 @@ for day in range(1, month + 1):
     if day % 3 == 0:
         cover_quantity -= pig_weight / 3
 
-if is_enough:
+if is_not_enough:
     print('Merry must go to the pet store!')
 else:
     print(f'Everything is fine! Puppy is happy! Food: {(food_quantity / 1000):.2f},'
