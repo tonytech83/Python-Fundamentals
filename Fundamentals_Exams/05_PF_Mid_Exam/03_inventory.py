@@ -14,9 +14,7 @@ def drop(items_jornal, current_command):
 
 
 def combine_items(items_jornal, current_command):
-    items = current_command[1].split(':')
-    old_item = items[0]
-    new_item = items[1]
+    old_item, new_item = current_command[1].split(':')
     for idx, item in enumerate(items_jornal):
         if item == old_item:
             items_jornal.insert(idx + 1, new_item)
