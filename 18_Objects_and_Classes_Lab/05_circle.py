@@ -14,7 +14,7 @@ class Circle:
         return (angle / 360) * Circle.__pi * (self.diameter / 2) ** 2
 
 
-############# Test code ###########
+# test code
 circle = Circle(10)
 angle = 5
 
