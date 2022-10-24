@@ -5,13 +5,13 @@ class Circle:
         self.diameter = diameter
 
     def calculate_circumference(self):
-        return self.__pi * self.diameter
+        return Circle.__pi * self.diameter
 
     def calculate_area(self):
-        return self.__pi * self.diameter ** 2 / 4
+        return Circle.__pi * self.diameter ** 2 / 4
 
     def calculate_area_of_sector(self, angle):
-        return angle / 360 * self.__pi * (self.diameter / 2) ** 2
+        return (angle / 360) * Circle.__pi * (self.diameter / 2) ** 2
 
 
 ############# Test code ###########
