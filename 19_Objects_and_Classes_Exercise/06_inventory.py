@@ -13,8 +13,12 @@ class Inventory:
     def get_capacity(self):
         return self.__capacity
 
+    # created private method used to calculate the left items in __repr__ method
+    def __get_item_count(self):
+        return len(self.items)
+
     def __repr__(self):
-        return f'Items: {", ".join(self.items)}.\nCapacity left: {self.get_capacity() - len(self.items)}'
+        return f'Items: {", ".join(self.items)}.\nCapacity left: {self.get_capacity() - self.__get_item_count()}'
 
 
 # test code
