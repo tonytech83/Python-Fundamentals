@@ -16,6 +16,7 @@ class Catalogue:
         return output
 
 
+# test code
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
 catalogue.add_product("Mirror")
