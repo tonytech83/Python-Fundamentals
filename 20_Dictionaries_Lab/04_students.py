@@ -1,19 +1,20 @@
-students = {}
+courses = {}
 
 while True:
-    command = input()
-    if ':' not in command:
+    data = input()
+    if ':' not in data:
         break
-    name, student_id, course = command.split(':')
-    students[student_id] = name, course
+    name, student_id, course = data.split(':')
+    if course not in courses:
+        courses[course] = {}
+    courses[course][student_id] = name
 
-course_name = ''
-
-if '_' in command:
-    course_name = command.replace('_', ' ')
+if '_' in data:
+    searched_course = data.replace('_', ' ')
 else:
-    course_name = command
+    searched_course = data
 
-for key, value in students.items():
-    if course_name in value:
-        print(f'{value[0]} - {key}')
+for course_name in courses:
+    if course_name == searched_course:
+        for key, value in courses[course_name].items():
+            print(f'{value} - {key}')
