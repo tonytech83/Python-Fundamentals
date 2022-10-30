@@ -24,12 +24,11 @@ materials = {"shards": 0,
 legendary_item = None
 
 while True:
-    line = input()
-    data = line.split()
+    line = input().split()
 
-    for idx in range(0, len(data), 2):
-        material = data[idx + 1].lower()
-        quantity = int(data[idx])
+    for idx in range(0, len(line), 2):
+        material = line[idx + 1].lower()
+        quantity = int(line[idx])
 
         if material not in materials:
             materials[material] = quantity
