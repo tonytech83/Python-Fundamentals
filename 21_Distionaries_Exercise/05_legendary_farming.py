@@ -40,11 +40,6 @@ while True:
         break
 
 print(f'{legendary_item} obtained!')
-print(f'shards: {materials["shards"]}')
-print(f'fragments: {materials["fragments"]}')
-print(f'motes: {materials["motes"]}')
+
 for key, value in materials.items():
-    if key == 'shards' or key == 'fragments' or key == 'motes':
-        pass
-    else:
-        print(f'{key}: {value}')
+    print(f'{key}: {value}')
