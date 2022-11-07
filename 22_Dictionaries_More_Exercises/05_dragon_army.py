@@ -1,4 +1,7 @@
 class Dragon:
+    """
+    This class represents the stats of dragon objects
+    """
     def __init__(self, type: str, name: str, damage: int, health: int, armor: int):
         self.type = type
         self.name = name
@@ -7,6 +10,9 @@ class Dragon:
         self.armor = armor
 
     def add_dragon(self):
+        """
+        Adds a new Dragon to the list of Dragons or update the list with new stats of existing dragon.
+        """
         if self.type not in dragon_army.keys():
             dragon_army[self.type] = {}
             if self.name not in dragon_army[self.type].keys():
@@ -31,9 +37,9 @@ class Dragon:
 
 
 dragon_army = {}
-dragon_average_stats = {}
 number_of_dragons = int(input())
 
+# read date form inputs and call add_dragon method from class Dragon
 for _ in range(number_of_dragons):
     data = input().split()
     dragon_type = data[0]
@@ -52,7 +58,7 @@ for _ in range(number_of_dragons):
     new_dragon = Dragon(dragon_type, dragon_name, int(dragon_damage), int(dragon_health), int(dragon_armor))
     Dragon.add_dragon(new_dragon)
 
-# calculate average
+# calculate average stats by type of dragon and print results
 for color, dragon_info in dragon_army.items():
     total_damage = 0
     total_health = 0
