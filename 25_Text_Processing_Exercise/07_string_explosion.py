@@ -11,8 +11,6 @@ while '>' in sequence:
     if sequence[0] == '>':
         new_sequence += '>'
         sequence = sequence[1:]
-        if not sequence[0].isdigit():
-            break
         strength += int(sequence[0])
         for remove in range(1, strength + 1):
             sequence = sequence[1:]
