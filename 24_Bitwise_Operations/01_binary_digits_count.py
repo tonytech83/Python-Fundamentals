@@ -1,12 +1,11 @@
 number = int(input())
-zero_or_one = input()
+zero_or_one = int(input())
+counter = 0
 
-binary_text = 'ones'
-if zero_or_one == 0:
-    binary_text = 'zeroes'
+while number != 0:
+    bit_reminder = number % 2
+    if bit_reminder == zero_or_one:
+        counter += 1
+    number = number // 2
 
-binary_number = bin(number)[2:]
-binary_digit_count = binary_number.count(zero_or_one)
-
-print(f'{number} - > {binary_number}')
-print(f'We have {binary_digit_count} {binary_text}')
+print(f'{counter}')
