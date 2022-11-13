@@ -1,39 +1,79 @@
 import re
 
-participants = input().split(', ')
 
-pattern_letters = r'[A-Za-z]+'
-pattern_digits = r'\d'
+def find_all_letters(current_line):
+    """
+    This function parse all letters from string according to a given pattern.
+    Concatenate all parsed letters in name variable
+    :param current_line: str
+    :return: str
+    """
+    name = ''
+    pattern = r'[A-Za-z]+'
+    matched_letters = re.findall(pattern, current_line)
+    for letter in matched_letters:
+        name += letter
+    return name
+
+
+def find_all_digits(current_line):
+    """
+    This function parse all digits from string according to a given pattern.
+    Sums all parsed digits in score variable
+    :param current_line: str
+    :return: int
+    """
+    score = 0
+    pattern = r'\d'
+    matched_digits = re.findall(pattern, current_line)
+    for digit in matched_digits:
+        score += int(digit)
+    return score
+
+
+def info_processing(current_name, current_score):
+    """
+    Store the information about the person only if the list of participants contains the name of the person.
+    If received the same person more than once just added distance to his old distance.
+    :param current_name: str
+    :param current_score: int
+    """
+    global participants
+    global race
+    if current_name in participants:
+        if current_name in race.keys():
+            race[current_name] += current_score
+        else:
+            race[current_name] = current_score
+
+
+def output():
+    """
+    Print the top 3 racers ordered by distance in descending.
+    """
+    global race
+    places = ['1st', '2nd', '3rd']
+    names = []
+    sorted_by_points = sorted(race.items(), key=lambda x: -x[1])
+    for kvp in list(sorted_by_points)[0:3]:
+        names.append(kvp[0])
+
+    for idx in range(len(places)):
+        print(f'{places[idx]} place: {names[idx]}')
+
+
+participants = input().split(', ')
 race = {}
 
 while True:
+
     line = input()
+
     if line == 'end of race':
         break
 
-    matched_letters = re.findall(pattern_letters, line)
-    matched_digits = re.findall(pattern_digits, line)
+    participant_name = find_all_letters(line)
+    participant_score = find_all_digits(line)
+    info_processing(participant_name, participant_score)
 
-    participant_name = ''
-    participant_score = 0
-
-    for letter in matched_letters:
-        participant_name += letter
-
-    for digit in matched_digits:
-        participant_score += int(digit)
-
-    if participant_name in participants:
-        if participant_name in race.keys():
-            race[participant_name] += participant_score
-        else:
-            race[participant_name] = participant_score
-
-places = ['1st', '2nd', '3rd']
-names = []
-sorted_by_points = sorted(race.items(), key=lambda x: -x[1])
-for kvp in list(sorted_by_points)[0:3]:
-    names.append(kvp[0])
-
-for idx in range(len(places)):
-    print(f'{places[idx]} place: {names[idx]}')
+output()
