@@ -1,9 +1,10 @@
 import re
 
-pattern = r'(\d{2})([/.-])([A-Z][a-z]{2})(\2)(\d{4})'
+pattern = r'(?P<day>\d{2})(?P<separator>[/\.-])(?P<month>[A-Z][a-z]{2})(?P=separator)(?P<year>\d{4})'
 data = input()
 
-matches = re.finditer(pattern, data)
+valid_dates = re.finditer(pattern, data)
 
-for match in matches:
-    print(f'Day: {match.group(1)}, Month: {match.group(3)}, Year: {match.group(5)}')
+for date in valid_dates:
+    current_date = date.groupdict()
+    print(f'Day: {current_date["day"]}, Month: {current_date["month"]}, Year: {current_date["year"]}')
