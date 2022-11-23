@@ -6,9 +6,7 @@ def add_piece(current_command):
     if new_piece in pieces:
         print(f'{new_piece} is already in the collection!')
     else:
-        pieces[new_piece] = []
-        pieces[new_piece].append(new_composer)
-        pieces[new_piece].append(new_key)
+        pieces[new_piece] = [new_composer, new_key]
         print(f'{new_piece} by {new_composer} in {new_key} added to the collection!')
 
 
@@ -40,9 +38,7 @@ pieces = {}
 for _ in range(number_of_pieces):
     piece, composer, key = input().split('|')
     if piece not in pieces:
-        pieces[piece] = []
-    pieces[piece].append(composer)
-    pieces[piece].append(key)
+        pieces[piece] = [composer, key]
 
 while True:
     command = input().split('|')
