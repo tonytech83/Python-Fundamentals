@@ -21,6 +21,18 @@ In this repository you can find solutions for tasks from the Programming Fundame
 
 - [Problem descriptiom and online judge system](https://judge.softuni.org/Contests/#!/List/ByCategory/191/Python-Fundamentals)
 
+## Topics
+
+- Basic Syntax, Conditional Statements and Loops
+- Data Types and Variables
+- Lists Basics
+- Functions
+- Lists Advanced
+- Objects and Classes
+- Dictionaries
+- Text Processing
+- Regular Expressions
+
 <br/>
 <br/>
 
