@@ -80,3 +80,10 @@ fabric.properties
 # from me
 .idea/**/profiles_settings.xml
 .idea/vcs.xml
+/22_Dictionaries_More_Exercises/.idea/.gitignore
+/22_Dictionaries_More_Exercises/.idea/modules.xml
+/22_Dictionaries_More_Exercises/.idea/inspectionProfiles/profiles_settings.xml
+/22_Dictionaries_More_Exercises/.idea/inspectionProfiles/Project_Default.xml
+/22_Dictionaries_More_Exercises/.idea/vcs.xml
+/22_Dictionaries_More_Exercises/.idea/misc.xml
+/22_Dictionaries_More_Exercises/.idea/22_Dictionaries_More_Exercises.iml
