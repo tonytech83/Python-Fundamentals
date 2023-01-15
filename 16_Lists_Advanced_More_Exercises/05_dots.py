@@ -3,7 +3,8 @@ from collections import deque
 
 def read_matrix():
     """
-    Read matrix from console
+    Read matrix from console.
+
     :return: Returns matrix and coordinates of all dots in matrix
     """
     current_matrix = []
@@ -21,7 +22,8 @@ def read_matrix():
 
 def is_inside(row, col):
     """
-    Checks coordinates are in matrix
+    Checks coordinates are in matrix.
+
     :param row: row of next move
     :param col: col of next move
     :return: boolean
@@ -31,7 +33,9 @@ def is_inside(row, col):
 
 def dot_count_finder(row, col, count):
     """
-    Recursive function with found the longest path form starting point.
+    Recursive function searches the largest count of dots that could be connected at once.
+    You could only connect horizontally or vertically.
+
     :param row: row of starting point
     :param col: col of starting point
     :param count: set of all unique points in matrix which can be connected from starting point.
